@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío Alura</title>
+    <link rel="icon" href="./images/alura.png">
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="./images/logo-alura.png" alt="Logo de la Empresa" class="logo-alura">
+    </header>
+    <main>
+        <article class="main-container">
+            <section class="first-section">
+                <textarea class="textarea-first" placeholder="Ingrese el texto aquí"></textarea>
+                <div class="content-button">
+                    <span class="alert">
+                        <img src="./images/alert.png" alt="Icono de alerta" />
+                        Solo letras minúsculas y sin acentos
+                    </span>
+                    <div class="button">
+                        <button class="encryption-button" onclick="encryptionbutton()">Encriptar</button>
+                        <button class="decrypt-button" onclick="decryptbutton()">Desencriptar</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="second-section">
+                <img class="observer" src="./images/observador.png" alt="Icono de observador">
+                <textarea  class="textarea-second" placeholder="Ningún mensaje fue encontrado" readonly></textarea>
+                <p class="indications">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button class="copy-button" onclick="copybutton()">Copiar</button>
+            </section>
+        </article>
+    </main>
+    <footer class="footer-alura">Joseph Sebastian Zavala Reyes</footer>
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+</body>
+</html>
