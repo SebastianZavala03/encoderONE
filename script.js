@@ -133,11 +133,13 @@ text1.addEventListener('input', function(event) {
     }
 
     // Evitar la entrada de letras con acentos
-    const withoutAccents = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    if (key !== withoutAccents || key.toUpperCase() === key) {
-        event.preventDefault();
-        return;
+    // Evitar la entrada de letras con acentos
+    const withoutAccents = this.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    if (this.value !== withoutAccents) {
+        this.value = withoutAccents;
+        this.setSelectionRange(start - 1, start - 1); // Mantener el cursor en la misma posición
     }
+
 });
 
 
